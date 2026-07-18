@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/ezeria.rpy", line 36, in script
+    e sad "Yeah, might be"
+Exception: Say has image attributes ('sad',), but there's no image tag associated with the speaking character.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/ezeria.rpy", line 36, in script
+    e sad "Yeah, might be"
+  File "C:\Users\Skysac\Downloads\renpy-8.3.0-sdk\renpy\ast.py", line 2572, in execute
+    Say.execute(self)
+  File "C:\Users\Skysac\Downloads\renpy-8.3.0-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Skysac\Downloads\renpy-8.3.0-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Skysac\Downloads\renpy-8.3.0-sdk\renpy\character.py", line 1389, in __call__
+    old_attr_state = self.handle_say_attributes(False, interact)
+  File "C:\Users\Skysac\Downloads\renpy-8.3.0-sdk\renpy\character.py", line 1208, in handle_say_attributes
+    if self.resolve_say_attributes(predicting, attrs):
+  File "C:\Users\Skysac\Downloads\renpy-8.3.0-sdk\renpy\character.py", line 1134, in resolve_say_attributes
+    raise Exception("Say has image attributes %r, but there's no image tag associated with the speaking character." % (attrs,))
+Exception: Say has image attributes ('sad',), but there's no image tag associated with the speaking character.
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.0.24082114
+LBoDW 1.0
+Sat Jul 11 00:25:04 2026
